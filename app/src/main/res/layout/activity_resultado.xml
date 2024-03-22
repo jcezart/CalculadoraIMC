@@ -27,60 +27,59 @@
 
     <TextView
         android:id="@+id/text_Classificacao"
-        tools:text="Classificação:  Abaixo do peso"
-        android:textSize="18sp"
-        android:layout_margin="8dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAlignment="center"/>
+        android:layout_margin="8dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        tools:text="Classificação:  Abaixo do peso" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="25dp"
-        android:textAlignment="center"
         android:text="Veja a tabela de IMC abaixo:"
-        />
+        android:textAlignment="center" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="1dp"
-        android:textSize="18sp"
         android:text="   Menor que 18,5 -> Abaixo do peso."
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:textSize="18sp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:textSize="18sp"
         android:text="Entre 18,5 e 24,9 -> Normal."
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:textSize="18sp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:textSize="18sp"
         android:text="Entre 25,0 e 29,9 -> Sobrepeso I"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:textSize="18sp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:textSize="18sp"
         android:text="Entre 30,0 e 39,9 -> Sobrepeso II."
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:textSize="18sp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:textSize="18sp"
         android:text="@string/maior_que_40_0_obesidade"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:textSize="18sp" />
 
 
 </LinearLayout>
