@@ -1,16 +1,22 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.PrimeiroProjeto" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
-        <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_200</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
-        <item name="colorOnPrimary">@color/black</item>
-        <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_200</item>
-        <item name="colorOnSecondary">@color/black</item>
-        <!-- Status bar color. -->
-        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
-        <!-- Customize your theme here. -->
+    <!-- Cores para o tema noturno -->
+    <item name="colorPrimary">@color/night_colorPrimary</item>
+    <item name="colorPrimaryVariant">@color/night_colorPrimaryVariant</item>
+    <item name="colorOnPrimary">@color/night_colorOnPrimary</item>
+
+    <item name="colorSecondary">@color/night_colorSecondary</item>
+    <item name="colorSecondaryVariant">@color/night_colorSecondaryVariant</item>
+    <item name="colorOnSecondary">@color/night_colorOnSecondary</item>
+
+    <!-- Status bar color -->
+
+
+        <!-- Cor abaixo é a cor da barra de baixo do app -->
+       <!--<item name="android:navigationBarColor">@color/night_colorPrimary</item> -->
+
     </style>
+
+    <style name="Theme.PrimeiroProjeto" parent="Base.Theme.PrimeiroProjeto" />
 </resources>

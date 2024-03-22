@@ -1,5 +1,6 @@
 package com.example.primeiroprojeto
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,6 +10,7 @@ import android.widget.TextView
 import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
+        @SuppressLint("SuspiciousIndentation")
         override fun onCreate(savedInstanceState: Bundle?) {
                 super.onCreate(savedInstanceState)
                 setContentView(R.layout.activity_main)
@@ -16,31 +18,29 @@ class MainActivity : AppCompatActivity() {
 
        //Recuperar UI component no arquivo Kotlin (necessário ID do componente no XML)
                 //Colocar ação no botão
-        val btnCalcular: Button = findViewById<Button>(R.id.btcCalcular)
-        val editPeso: EditText = findViewById(R.id.editPeso)
-        val editAltura: EditText = findViewById(R.id.editAltura)
+        val btnCalculate: Button = findViewById<Button>(R.id.btnCalculate)
+        val editWeight: EditText = findViewById(R.id.editWeight)
+        val editHeight: EditText = findViewById(R.id.editHeight)
 
 
-        btnCalcular.setOnClickListener {
+                btnCalculate.setOnClickListener {
 
-                val pesoStr = editPeso.text.toString()
-                val alturaStr = editAltura.text.toString()
+                val weightStr = editWeight.text.toString()
+                val heightStr = editHeight.text.toString()
 
-                if (pesoStr.isNotEmpty() && alturaStr.isNotEmpty()) {
+                if (weightStr.isNotEmpty() && heightStr.isNotEmpty()) {
 
-
-                        val peso: Float = pesoStr.toFloat()
-                        val altura: Float = alturaStr.toFloat()
-                        val imc: Float = (peso / (altura * altura))
-
+                        val weight: Float = weightStr.toFloat()
+                        val height: Float = heightStr.toFloat()
+                        val bmi: Float = (weight / (height * height))
 
                         val intent = Intent(this, ResultadoActivity::class.java)
                                 .apply {
-                                        putExtra("EXTRA_RESULT", imc)
+                                        putExtra("EXTRA_RESULT", bmi)
                                 }
                         startActivity(intent)
                 }else {
-                        Toast.makeText(this, "Preencher todos os campos", Toast.LENGTH_LONG).show()
+                        Toast.makeText(this, "Fill all fields.", Toast.LENGTH_LONG).show()
                 }
 
         }

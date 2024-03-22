@@ -5,51 +5,64 @@ import android.view.MenuItem
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import android.graphics.Color
+import android.os.Build
+import androidx.core.content.ContextCompat
+import androidx.annotation.RequiresApi
+import android.text.SpannableString
+import android.text.style.ForegroundColorSpan
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import org.w3c.dom.Text
 
 class ResultadoActivity : AppCompatActivity() {
+    @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_resultado)
         supportActionBar?.setHomeButtonEnabled(true)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        /*ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets*/
 
-            val tvResultado = findViewById<TextView>(R.id.text_resultado)
+            val tvResult = findViewById<TextView>(R.id.text_result)
             val result = intent.getFloatExtra("EXTRA_RESULT", 0.1f)
-            val tvClassificacao = findViewById<TextView>(R.id.text_Classificacao)
+            val tvClassification = findViewById<TextView>(R.id.text_classification)
 
-            tvResultado.text = result.toString()
+            tvResult.text = result.toString()
 
-            var classificacao = ""
+            var classification = ""
+            var color: Int = Color.BLACK
+            var color2: Int = ContextCompat.getColor(this, R.color.orange)
+
         if(result < 18.5){
 
-            classificacao = "Abaixo do peso."
+            classification = "Underweight."
+            color = Color.BLUE
 
         }else if(result >= 18.5 && result <= 24.9){
 
-            classificacao = "Normal."
+            classification = "Normal."
+            color = Color.GREEN
 
         }else if(result >= 25 && result <= 29.9){
 
-            classificacao = "Sobrepeso I"
+            classification = "Overweight I"
+            color = ContextCompat.getColor(this, R.color.orange)
+
 
         }else if(result >= 30 || result <= 39.9){
 
-            classificacao = "Sobrepeso II"
+            classification = "Overweight II"
+            color = Color.RED
 
         }else{
 
-            classificacao = "Obesidade"
+            classification = "Obese"
+            color = Color.RED
         }
 
-        tvClassificacao.text = getString(R.string.msg_classificacao, classificacao)
+        tvClassification.text = getString(R.string.msg_classification, classification)
+        tvClassification.setTextColor(color)
 
         }
 

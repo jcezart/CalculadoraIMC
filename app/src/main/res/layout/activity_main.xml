@@ -5,37 +5,45 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="20dp"
+    android:layout_margin="1dp"
+    android:background="@color/background"
     tools:context=".MainActivity">
 
     <EditText
         android:maxLength="6"
-        android:id="@+id/editPeso"
+        android:id="@+id/editWeight"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"
-        android:hint="Digite o peso" />
+        android:hint="Type your weight." />
 
     <EditText
         android:maxLength="6"
-        android:layout_below="@+id/editPeso"
-        android:id="@+id/editAltura"
+        android:layout_below="@+id/editWeight"
+        android:id="@+id/editHeight"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:inputType="numberDecimal"
-        android:hint="Digite a altura" />
+        android:hint="Type your height." />
 
 
     <Button
-
-        android:id="@+id/btcCalcular"
-        android:layout_width="match_parent"
+        android:id="@+id/btnCalculate"
+        android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:layout_marginBottom="25dp"
         android:layout_centerHorizontal="true"
-        android:text="Calcular IMC" />
+        android:text="Calculate BMI"
+        android:background="@drawable/rounded_button_background"/>
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/img_indoor_bike"/>
 
 
 </RelativeLayout>

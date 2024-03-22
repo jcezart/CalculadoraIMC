@@ -8,4 +8,38 @@
     <color name="black">#FF000000</color>
     <color name="red">#FFCF2929</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="orange_200">#FFFFAB91</color>
+    <color name="orange_500">#FFFF5722</color>
+    <color name="orange_700">#FFF4511E</color>
+    <color name="orange">#FFA500</color>
+    <color name="green_200">#FFA5D6A7</color>
+    <color name="green_500">#FF4CAF50</color>
+    <color name="green_700">#FF388E3C</color>
+    <color name="blue_200">#FF90CAF9</color>
+    <color name="blue_500">#FF2196F3</color>
+    <color name="blue_700">#FF1976D2</color>
+    <color name="pink">#FFEC407A</color>
+    <color name="yellow">#FFFFEB3B</color>
+    <color name="light_gray">#E0E0E0</color>
+    <color name="gray">#FF9E9E9E</color>
+    <color name="background">#FF90CAF9</color>
+
+    <!-- Cores para o tema noturno -->
+    <color name="night_blue_900">#0D47A1</color>
+    <color name="night_blue_700">#0A3D91</color>
+    <color name="night_white">#FFFFFF</color>
+
+    <!-- Cores para o tema noturno -->
+    <color name="night_colorPrimary">#0D47A1</color>
+    <color name="night_colorPrimaryVariant">#0A3D91</color>
+    <color name="night_colorOnPrimary">#FFFFFF</color>
+
+    <color name="night_colorSecondary">#0D47A1</color>
+    <color name="night_colorSecondaryVariant">#0A3D91</color>
+    <color name="night_colorOnSecondary">#FFFFFF</color>
+    <!-- Cor para a barra de status no tema noturno -->
+    <!--<color name="night_statusBarColor">#0D47A1</color> -->
+    <!-- Cor da barra inferior -->
+    <color name="navigationBarColor">#0D47A1</color>
 </resources>

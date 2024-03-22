@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">Índice de Massa Corporal (IMC)</string>
-    <string name="msg_classificacao">Classificação: %1$s!</string>
+    <string name="app_name">Body Mass Index (BMI)</string>
+    <string name="msg_classification">Classification: %1$s</string>
     <string name="maior_que_40_0_obesidade"><![CDATA[Maior que 40,0 -> Obesidade.]]></string>
 
 </resources>
